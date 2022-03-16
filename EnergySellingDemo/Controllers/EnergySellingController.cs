@@ -73,7 +73,6 @@ namespace EnergySellingDemo.Controllers
         /// <returns></returns>
         private bool IsItWeekOffDay(DateTime date)
         {
-            /* return true if day is weekoff else false */
             return (date.DayOfWeek == DayOfWeek.Saturday) || (date.DayOfWeek == DayOfWeek.Sunday);
         }
     }
