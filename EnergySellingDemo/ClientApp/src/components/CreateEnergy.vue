@@ -1,7 +1,7 @@
 <template>
     <div class="vue-tempalte">
-        <form v-on:submit.prevent="submitFormEnergySellingDetails">
-            <h3>Add Energy Details</h3>
+        <form v-on:submit.prevent="submitFormEnergy">
+            <h4>Create Energy Details</h4>
             <div class="row">
                 <div class="col-md-4">
                 </div>
@@ -22,7 +22,7 @@
                         <label class="float-left" for="price">Price of Energy</label>
                         <input name="price" v-model="form.price" id="price" type="number" class="form-control form-control-lg" />
                     </div>
-                    <button type="submit" class="btn btn-dark btn-lg btn-block">Save</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
                 </div>
                 <div class="col-md-4">
                 </div>
@@ -45,16 +45,13 @@
             };
         },
         methods: {
-            submitFormEnergySellingDetails() {
-                axios.post('/EnergySelling', this.form)
-                    .then((response) => {
-                        console.log(response.data)
-                        this.energysellings = response.data;
-                        this.$router.push('/EnergySellingData');
-                    })
-                    .catch(function (error) {
-                        alert(error);
-                    });
+            submitFormEnergy() {
+                axios.post('/EnergySelling', this.form).then((response) => {
+                    this.energysellings = response.data;
+                    this.$router.push('/EnergySellingData');
+                }).catch(function (error) {
+                    alert(error);
+                });
             }
         }
     }

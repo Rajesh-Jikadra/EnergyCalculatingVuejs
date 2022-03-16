@@ -1,14 +1,11 @@
 <template>
-    <h1 id="tableLabel">Energy Selling</h1>
-    
+    <!--<h3 id="tableLabel">Energy Selling</h3>-->    
     <div class="row">
-        <div class="col-md-12 mb-2 ">
-            <button class="btn btn-primary float-right mr-1" @click="createEnergy">
-                Add Energy
-            </button>
+        <div class="col-md-12 mb-2">
+            <button class="btn btn-primary float-left ml-2" @click="createEnergy">Add Energy</button>
         </div>
     </div>
-    <table class='table table-striped' aria-labelledby="tableLabel" v-if="energysellings">
+    <table class='table table-bordered' aria-labelledby="tableLabel" v-if="energysellings">
         <thead>
             <tr>
                 <th>Date</th>

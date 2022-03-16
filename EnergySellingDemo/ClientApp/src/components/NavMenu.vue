@@ -1,21 +1,15 @@
 <template>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light navbar-dark bg-primary border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand">Energy Selling</a>
-                <button class="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target=".navbar-collapse"
-                        aria-label="Toggle navigation"
-                        @click="toggle">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation" @click="toggle">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
-                     v-bind:class="{show: isExpanded}">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" v-bind:class="{show: isExpanded}">
                     <ul class="navbar-nav flex-grow">
                         <li class="nav-item">
-                            <router-link :to="{ name: 'EnergySellingData' }" class="nav-link text-dark">Energy Selling Data</router-link>
+                            <router-link :to="{ name: 'EnergySellingData' }" class="nav-link text-ligh">Energy Selling Data</router-link>
                         </li>
                     </ul>
                 </div>
@@ -23,8 +17,6 @@
         </nav>
     </header>
 </template>
-
-
 <style>
     a.navbar-brand {
         white-space: normal;
